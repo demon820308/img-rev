@@ -1,0 +1,132 @@
+{
+ "meta": {
+  "skill": "img-rev",
+  "version": "1.1.0"
+ },
+ "mode": "person_swap",
+ "palette_basis": "measured",
+ "report": {
+  "medium": "真人写实人像摄影，高调剧照风（源图观察）。",
+  "composition": "主体居左三分区的中近景，三层纵深：边缘大虚化前景花、清晰主体、满幅花墙虚化背景，脸周留透气空间（源图观察）。",
+  "shot_scale": "中近景，人物占高约九成，平视（源图观察）。",
+  "optics": {
+   "effect": "背景与前景化成柔圆光斑，长焦式平缓压缩透视（源图观察）。",
+   "reading": "~85mm, ~f/1.8-f/2.8",
+   "basis": "inferred"
+  },
+  "lighting": {
+   "source": "户外日光正面偏左上，脸为全图最亮（源图观察）。",
+   "quality": "阴影边缘羽化，暗部提亮带乳白（源图观察）。",
+   "temperature_kelvin": "~5200-5800K",
+   "contrast_ratio": "~1.5:1-2.5:1",
+   "basis": "inferred"
+  },
+  "exposure": "高调，白位接近溢出但保层次，黑位仅头发压实（源图观察）。",
+  "palette": [
+   {
+    "hex": "#F94A17",
+    "name": "山茶橙红（源图工具采样）"
+   },
+   {
+    "hex": "#EDF2FB",
+    "name": "蓝白（源图工具采样）"
+   },
+   {
+    "hex": "#3C5A4C",
+    "name": "深叶绿（源图工具采样）"
+   },
+   {
+    "hex": "#F4CAC8",
+    "name": "肤色粉（源图工具采样）"
+   },
+   {
+    "hex": "#131812",
+    "name": "发黑（源图工具采样）"
+   }
+  ],
+  "grade": {
+   "description": "高调清透，微对比压低一档，全幅淡淡柔光扩散、高光晕开（源图观察效果）。",
+   "finish_label": "数字柔光扩散质感，具体胶片型号未知",
+   "basis": "inferred"
+  },
+  "textures": [
+   "通透皮肤与毛孔细腻质感",
+   "成缕光泽的长发",
+   "花瓣与叶片的蜡质感"
+  ],
+  "atmosphere": "明亮花园空气，无雾无尘（源图观察）。",
+  "background_logic": "满幅花墙作装饰背景，靠色彩对撞托出主体（源图观察）。",
+  "era_styling": "风格层不带年代服装，年代由新主体自带（剥离规则）。",
+  "mood": "清甜亲近，来自最亮的脸、直视镜头与满幅饱和花色（源图观察）。",
+  "density_instantaneity": "边缘密、脸周疏；一缕发丝被风吹过脸颊的瞬间感（源图观察）。"
+ },
+ "visual_anchors": [
+  {
+   "anchor": "橙红加白山茶花墙满幅虚化",
+   "basis": "observed"
+  },
+  {
+   "anchor": "脸最亮的高调日光加全幅柔光朦胧",
+   "basis": "observed"
+  },
+  {
+   "anchor": "大虚化前景花压住一侧边缘形成三层纵深",
+   "basis": "observed"
+  },
+  {
+   "anchor": "浅色主体对饱和花墙的颜色对撞",
+   "basis": "observed"
+  },
+  {
+   "anchor": "发丝被风吹过脸颊的瞬间感",
+   "basis": "observed"
+  }
+ ],
+ "prompts": {
+  "positive_en": "Recreate the camellia garden hanfu portrait with the face of the woman from the character sheet and its close-up crop: a distinctly long oval face, clearly longer than wide, elongated chin and long smooth jawline, slim narrow cheeks, large round eyes with calm direct gaze, soft straight brows, straight nose, natural pink lips; gentle closed-lip smile with no teeth showing; white hanfu robe with pale blue embroidery, half-up bun with silver hairpin and crystal tassel earrings, head gently tilted, one strand of hair blown across her face, blurred white camellia and wooden calligraphy sign in the left foreground, large blurred white gauze sweeping the lower right, orange-red and white camellia wall in soft bokeh behind, high-key midday white daylight, face the brightest point, faint diffusion veil.",
+  "positive_zh": "照山茶花园汉服人像原图重做，脸换成定妆板及其近景裁图中的女子：偏长的鹅蛋脸、脸长明显大于脸宽、下巴偏长、下颌线长而柔和、脸颊瘦窄，大而圆的眼睛平静直视，柔和的平直眉，直鼻，自然粉唇；抿唇浅笑不露齿；白衣汉服淡蓝刺绣、半挽发髻银簪、水晶流苏耳坠，头微微侧着，一缕头发被风吹过脸庞，左前景虚化白山茶与木牌，右下大片虚化白纱，背景橙红与白色山茶花墙化成柔圆光斑，高调正午白日光，脸是全图最亮处，全幅淡淡柔光扩散。",
+  "negative_en": [
+   "teeth showing",
+   "broad laughing smile",
+   "round short face",
+   "full chubby cheeks",
+   "source image face",
+   "earbuds",
+   "book",
+   "modern clothing",
+   "sunset golden cast",
+   "harsh shadows",
+   "razor sharp background",
+   "plastic skin",
+   "watermark",
+   "extra people"
+  ]
+ },
+ "swap_spec": {
+  "identity_source": "Character sheet (three panels, pink knit sweater) uploaded by the user; close-up panel is the face authority and was also supplied as a separate face crop reference.",
+  "expression_lock": "Gentle closed-lip smile with no teeth showing, exactly as soft as the source portrait; eyes open and relaxed, not squinting from laughter.",
+  "identity_anchors": [
+   "Long soft oval face, clearly longer than wide",
+   "Elongated chin with a long, smooth jawline",
+   "Slim, narrow cheeks without lower-face fullness",
+   "Large round eyes, wide-set, with a calm direct gaze",
+   "Soft straight brows of medium thickness",
+   "Straight nose with a small rounded tip",
+   "Natural pink lips with a fuller lower lip"
+  ],
+  "attempt": 2,
+  "qa": {
+   "score": 7,
+   "carried": [
+    "Eye size, shape and spacing match the authority face",
+    "Nose form and lip shape read as hers once the smile is closed",
+    "Skin tone and brow form carried over"
+   ],
+   "lost": [
+    "Face still shorter and rounder than the authority face; the elongated chin did not fully arrive",
+    "Cheeks fuller than the person's own",
+    "Part of the remaining gap is the source pose: a tilted, slightly lowered head foreshortens any face"
+   ]
+  }
+ }
+}
