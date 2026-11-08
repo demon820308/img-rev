@@ -1,7 +1,7 @@
 {
  "meta": {
   "skill": "img-rev",
-  "version": "1.1.0"
+  "version": "1.2.0"
  },
  "mode": "person_swap",
  "palette_basis": "measured",
@@ -83,37 +83,33 @@
   }
  ],
  "prompts": {
-  "positive_en": "Recreate the camellia garden hanfu portrait with the face of the woman from the character sheet and its close-up crop: a distinctly long oval face, clearly longer than wide, elongated chin and long smooth jawline, slim narrow cheeks, large round eyes with calm direct gaze, soft straight brows, straight nose, natural pink lips; gentle closed-lip smile with no teeth showing; white hanfu robe with pale blue embroidery, half-up bun with silver hairpin and crystal tassel earrings, head gently tilted, one strand of hair blown across her face, blurred white camellia and wooden calligraphy sign in the left foreground, large blurred white gauze sweeping the lower right, orange-red and white camellia wall in soft bokeh behind, high-key midday white daylight, face the brightest point, faint diffusion veil.",
-  "positive_zh": "照山茶花园汉服人像原图重做，脸换成定妆板及其近景裁图中的女子：偏长的鹅蛋脸、脸长明显大于脸宽、下巴偏长、下颌线长而柔和、脸颊瘦窄，大而圆的眼睛平静直视，柔和的平直眉，直鼻，自然粉唇；抿唇浅笑不露齿；白衣汉服淡蓝刺绣、半挽发髻银簪、水晶流苏耳坠，头微微侧着，一缕头发被风吹过脸庞，左前景虚化白山茶与木牌，右下大片虚化白纱，背景橙红与白色山茶花墙化成柔圆光斑，高调正午白日光，脸是全图最亮处，全幅淡淡柔光扩散。",
+  "positive_en": "A photorealistic portrait of the woman from Image 1, maintaining her pose with head gently tilted, her white hanfu robe with pale blue embroidery, her half-up bun with silver hairpin and crystal tassel earrings, the blurred white camellia and wooden calligraphy sign in the left foreground, the large blurred white gauze sweeping the lower right, and the orange-red and white camellia wall in soft bokeh behind her, in high-key midday white daylight. The key change is that her face is precisely replaced with the facial features of the woman from the close-up panel in Image 2, including her specific eye shape, nose and lip form, while perfectly blending with Image 1's existing skin tones and lighting. Her expression stays Image 1's: a gentle closed-lip smile, no teeth showing. The scene retains Image 1's bright, airy atmosphere and faint diffusion veil, at Image 1's size, 1908x1068.",
+  "positive_zh": "真人写实人像，沿用图 1 中女子的姿势（头微微侧着）、白衣汉服与淡蓝刺绣、半挽发髻上的银簪与水晶流苏耳坠、左前景虚化的白山茶与木牌、右下大片虚化白纱、背景橙红与白色山茶花墙化成的柔圆光斑与正午高调白日光。关键变动只有一处：她的脸被精确替换为图 2 近景格中女子的面部特征，包括她具体的眼型、鼻型与唇形，并与图 1 既有的肤色与光照无缝融合。表情保持图 1 的：抿唇浅笑，不露齿。场景保留图 1 明亮通透的气氛与淡淡的柔光朦胧，尺寸与图 1 一致，1908×1068。",
   "negative_en": [
    "teeth showing",
    "broad laughing smile",
-   "round short face",
-   "full chubby cheeks",
-   "source image face",
+   "the source person's face",
    "earbuds",
    "book",
    "modern clothing",
    "sunset golden cast",
    "harsh shadows",
-   "razor sharp background",
+   "razor-sharp background",
    "plastic skin",
    "watermark",
    "extra people"
   ]
  },
  "swap_spec": {
-  "identity_source": "Character sheet (three panels, pink knit sweater) uploaded by the user; close-up panel is the face authority and was also supplied as a separate face crop reference.",
-  "expression_lock": "Gentle closed-lip smile with no teeth showing, exactly as soft as the source portrait; eyes open and relaxed, not squinting from laughter.",
-  "identity_anchors": [
-   "Long soft oval face, clearly longer than wide",
-   "Elongated chin with a long, smooth jawline",
-   "Slim, narrow cheeks without lower-face fullness",
-   "Large round eyes, wide-set, with a calm direct gaze",
-   "Soft straight brows of medium thickness",
-   "Straight nose with a small rounded tip",
-   "Natural pink lips with a fuller lower lip"
+  "identity_source": "Image 2: the user's uploaded three-panel character sheet (pink knit sweater)",
+  "face_reference": "The close-up panel of Image 2",
+  "canvas_size": "1908x1068",
+  "feature_points": [
+   "eye shape",
+   "nose",
+   "lip form"
   ],
+  "expression_handling": "from_canvas",
   "attempt": 2,
   "qa": {
    "score": 7,

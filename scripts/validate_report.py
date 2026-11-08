@@ -7,8 +7,9 @@ palette has exactly 5 HEX colors with an honest palette_basis, inferred
 optics or Kelvin readings must be written as a tilde or a range, a
 style_only report must carry a subject-free style_profile, and a
 person_swap report must carry a complete swap_spec (identity source,
-expression lock, at least four identity anchors, attempt 1 to 3, and a QA
-block with score and carried/lost lists).
+named face panel, measured canvas size, at least two referential feature
+points, expression handling, and a QA block with score and carried/lost
+lists).
 """
 import json
 import re
@@ -82,15 +83,17 @@ def main():
         swap = d.get("swap_spec")
         if not isinstance(swap, dict):
             fail("person_swap mode requires a swap_spec object")
-        for key in ("identity_source", "expression_lock"):
+        for key in ("identity_source", "face_reference", "canvas_size"):
             if not (swap.get(key) or "").strip():
                 fail(f"swap_spec.{key} is required in person_swap mode")
-        anchors_i = swap.get("identity_anchors")
-        if not isinstance(anchors_i, list) or len(anchors_i) < 4:
-            fail("swap_spec.identity_anchors needs at least 4 measured identity anchors")
+        points = swap.get("feature_points")
+        if not isinstance(points, list) or len(points) < 2:
+            fail("swap_spec.feature_points needs at least 2 referential feature points")
+        if swap.get("expression_handling") not in ("with_face", "from_canvas"):
+            fail("swap_spec.expression_handling must be with_face or from_canvas")
         attempt = swap.get("attempt")
-        if not isinstance(attempt, int) or not (1 <= attempt <= 3):
-            fail("swap_spec.attempt must be an integer between 1 and 3 (three-attempt ceiling)")
+        if not isinstance(attempt, int) or attempt < 1:
+            fail("swap_spec.attempt must be a positive integer")
         qa = swap.get("qa")
         if not isinstance(qa, dict):
             fail("swap_spec.qa object is required in person_swap mode")

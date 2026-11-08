@@ -1,5 +1,5 @@
 name: img-rev
 title: Reverse-Engineer Images into Style, Light, Lens and Grade Reports
-description: Reverse-engineer a reference image into a visible extraction report and reusable prompts: style, lighting, lens and optics, color palette and grading, composition, materials and post, each value graded observed, inferred or unknown. 根据图片提取风格、光线、镜头、调色色调。 Modes for extraction report, high-fidelity recreation, style-only reuse with the subject stripped, and person-swap recreation with a newly uploaded face.
+description: Reverse-engineer a reference image into a visible extraction report and reusable prompts: style, lighting, lens and optics, color palette and grading, composition, materials and post, each value graded observed, inferred or unknown. 根据图片提取风格、光线、镜头、调色色调。 Modes for extraction report, high-fidelity recreation, style-only reuse with the subject stripped, and person swap that only writes the face-replacement prompt.
 category: Media
 include_in_prompt: false
